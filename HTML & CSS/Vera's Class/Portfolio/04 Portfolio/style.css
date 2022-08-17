@@ -1,0 +1,293 @@
+/***
+    The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -moz-user-select: auto;
+   -ms-user-select: auto;
+       user-select: auto;
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::-moz-placeholder {
+  color: unset;
+}
+:-ms-input-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+ display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly.
+ - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  line-break: after-white-space;
+  -webkit-line-break: after-white-space;
+  -moz-user-select: auto;
+   -ms-user-select: auto;
+       user-select: auto;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+:root {
+  /* base size: body-md---medium (16px) */
+  --display-2xl: 4.5rem;
+  --display-xl: 3.75rem;
+  --display-lg: 3rem;
+  --display-md: 2.25rem;
+  --display-sm: 1.88rem;
+  --display-xs: 1.5rem;
+  --body-xl: 1.25rem;
+  --body-lg: 1.12rem;
+  --body-md: 1rem;
+  --body-sm: 0.88rem;
+  --body-xs: 0.75rem;
+  --white: #f4f5f7;
+  --dark-blue: #111827;
+  --bg-white: #f9fafb;
+  --bg-black: #111111;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  position: relative;
+}
+
+.section {
+  margin: 0 auto;
+  max-width: 1216px;
+}
+
+/* Navbar */
+.navbar {
+  left: 0;
+  right: 0;
+  max-width: 1216px;
+  margin: 0 auto;
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.navbar__logo {
+  font-size: var(--body-xl);
+  font-weight: 600;
+  color: var(--white);
+}
+.navbar__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  color: var(--white);
+}
+.navbar__link {
+  font-size: var(--body-sm);
+  font-weight: 600;
+  padding: 4px 8px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: #ccc;
+}
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero__background-top {
+  z-index: 1;
+}
+.hero__background-bottom {
+  z-index: 1;
+}
+.hero__h1 {
+  max-width: 1216px;
+  width: 100%;
+  margin: 0 auto;
+  top: 40%;
+  font-size: 136px;
+  font-weight: 800;
+  color: var(--white);
+  z-index: 1;
+  line-height: 120px;
+}
+
+/* Projects */
+.projects {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.projects__h2 {
+  font-size: var(--display-lg);
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 42px;
+}
+.projects__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 32px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  color: var(--dark-blue);
+}
+.card__img {
+  border-radius: 8px;
+}
+.card__main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.card__h3 {
+  font-size: var(--display-sm);
+  font-weight: 700;
+  line-height: 40px;
+}
+.card__p {
+  font-size: var(--body-md);
+  font-weight: 500;
+  line-height: 24px;
+}
+.card__a {
+  display: flex;
+  align-items: center;
+  font-size: var(--body-md);
+  font-weight: 600;
+  line-height: 24px;
+  padding: 12px 0;
+}
+
+.about,
+.skills {
+  background-color: var(--bg-white);
+  display: grid;
+  grid-template-columns: [first] 1fr [second] 1fr;
+  color: var(--dark-blue);
+}
+.about__wrapper,
+.skills__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+}
+.about__img,
+.skills__img {
+  width: 100%;
+}
+.about__h2,
+.skills__h2 {
+  font-size: var(--display-lg);
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 32px;
+}
+.about__p,
+.skills__p {
+  font-size: var(--body-md);
+  font-weight: 400;
+  line-height: 28px;
+  max-width: 700px;
+}
+
+.footer {
+  font-size: var(--body-sm);
+  font-weight: 400;
+  line-height: 20px;
+  height: 68px;
+  background-color: var(--bg-black);
+  color: #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

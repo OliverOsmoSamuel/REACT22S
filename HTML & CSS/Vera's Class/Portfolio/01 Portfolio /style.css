@@ -1,0 +1,14 @@
+body {
+  background: lightgrey;
+  font-family: "Roboto", sans-serif;
+}
+
+p,
+h2 {
+  color: #111;
+}
+
+.section__img {
+  max-width: 20vw;
+  height: auto;
+}

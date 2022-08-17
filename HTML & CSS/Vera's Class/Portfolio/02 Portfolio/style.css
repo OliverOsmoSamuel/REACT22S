@@ -1,0 +1,139 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  background: transparent;
+  scroll-behavior: smooth;
+}
+
+footer,
+header,
+section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  text-decoration: none;
+}
+
+/* Desing */
+body {
+  font-family: "Roboto", sans-serif;
+  display: block;
+}
+
+p,
+h2 {
+  color: #111;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("/assets/claudio-schwarz-oNWvPQXoEKc-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header__p {
+  font-size: 64px;
+  color: #eee;
+}
+
+.nav {
+  position: absolute;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 48px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nav__h2 {
+  font-size: 40px;
+  margin-bottom: 24px;
+  color: #eee;
+}
+.nav__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 48px;
+       column-gap: 48px;
+}
+.nav__link a {
+  color: #eee;
+}
+.nav__link a:hover {
+  filter: brightness(92%);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.nav__link a:focus {
+  filter: brightness(80%);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.section {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 64px auto;
+  padding: 24px;
+}
+.section__h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.section__wrapper {
+  display: flex;
+  row-gap: 24px;
+}
+.section__wrapper--img-right {
+  flex-direction: row-reverse;
+}
+.section__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 20vw;
+  height: auto;
+}
+.section__p {
+  width: auto;
+  max-width: 700px;
+  padding-left: 24px;
+}
+.section__p--img-right {
+  padding-left: 0;
+  padding-right: 24px;
+}
+.section--img-right {
+  background-color: antiquewhite;
+}
+
+footer {
+  background-color: #111;
+  color: #eee;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

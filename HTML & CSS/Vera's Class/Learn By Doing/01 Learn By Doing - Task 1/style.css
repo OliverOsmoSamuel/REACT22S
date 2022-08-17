@@ -1,0 +1,26 @@
+*,
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: darkred;
+}
+
+.color--white {
+  color: white;
+  text-align: center;
+}
+
+.body__text {
+  font-size: 20px;
+}
+
+.body__heading {
+  font-size: 40px;
+}
