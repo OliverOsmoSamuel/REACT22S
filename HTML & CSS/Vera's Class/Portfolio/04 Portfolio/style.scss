@@ -122,6 +122,7 @@ body {
 /* Navbar */
 
 .navbar {
+  padding: 0 40px;
   left: 0;
   right: 0;
   max-width: 1216px;
@@ -156,6 +157,7 @@ body {
 /* Hero */
 
 .hero {
+  padding: 0 40px;
   position: relative;
   display: flex;
   align-items: center;
@@ -191,6 +193,7 @@ body {
 /* Projects */
 
 .projects {
+  padding: 0 40px;
   margin-top: 80px;
   margin-bottom: 80px;
   &__h2 {
@@ -243,7 +246,7 @@ body {
 .skills {
   background-color: var(--bg-white);
   display: grid;
-  grid-template-columns: [first] 1fr [second] 1fr;
+  grid-template-columns: 1fr 1fr;
   color: var(--dark-blue);
   &__wrapper {
     display: flex;
@@ -271,36 +274,118 @@ body {
 }
 
 .contact {
+  padding: 0 40px;
+  background-image: url(/assets/bear_contact.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  &__container {
+    width: 100%;
+    max-width: 1216px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+  }
   &__wrapper {
     &-left {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
     }
     &-right {
+      background-color: var(--bg-white);
+      border-radius: 16px;
     }
   }
   &__title {
   }
   &__h2 {
+    font-size: var(--display-lg);
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: -2.5%;
+    color: var(--white);
+    margin-bottom: 8px;
   }
   &__p {
+    font-size: var(--body-md);
+    font-weight: 400;
+    line-height: 24px;
+    color: #fff;
+    opacity: 0.7;
   }
   &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
   }
   &__a {
+    font-size: var(--body-md);
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &__li {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: #2e2e2e;
   }
   &__socials {
+    display: flex;
+    gap: 24px;
+    align-items: center;
   }
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 24px;
   &__label {
+    font-size: var(--body-sm);
+    font-weight: 500;
+    line-height: 20px;
+    color: #374151;
   }
   &__input {
+    height: 48px;
+    border-radius: 6px;
+    border: 1px #d1d5db solid;
+    padding-left: 8px;
   }
   &__textarea {
+    border: 1px #d1d5db solid;
+    border-radius: 6px;
+    padding: 12px 8px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  &__button {
+    border-radius: 8px;
+    padding: 16px 24px;
+    background-color: var(--bg-black);
+    width: fit-content;
+    color: (var(--white));
   }
 }
 
 .footer {
+  padding: 0 40px;
   font-size: var(--body-sm);
   font-weight: 400;
   line-height: 20px;
@@ -310,4 +395,136 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    &__h1 {
+      font-size: 80px;
+      font-weight: 700;
+      line-height: 75px;
+      letter-spacing: -0.01 em;
+    }
+  }
+  .projects {
+    &__h2 {
+      font-size: var(--display-md);
+      font-weight: 700;
+      line-height: 45px;
+      letter-spacing: -2.5%;
+    }
+    &__wrapper {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr auto;
+    }
+  }
+  .card {
+    &:last-child {
+      grid-area: 2 / 1 / span 1 / span 2;
+    }
+    &__img {
+      height: 328px;
+    }
+  }
+  .about,
+  .skills {
+    display: flex;
+    flex-direction: column;
+    &__h2 {
+      font-size: var(--display-md);
+      font-weight: 700;
+      line-height: 45px;
+      letter-spacing: -2.5%;
+      margin-bottom: 16px;
+    }
+    &__wrapper {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+  .skills {
+    flex-direction: column-reverse;
+    &__wrapper {
+      &__p {
+        grid-column-start: 1;
+        grid-row-end: 1;
+      }
+    }
+  }
+  .contact {
+    &__h2 {
+      font-size: var(--display-md);
+      font-weight: 700;
+      line-height: 45px;
+      letter-spacing: -2.5%;
+      margin-bottom: 8px;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    &__wrapper-left {
+      gap: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .navbar {
+    display: none;
+  }
+  .hero {
+    padding: 0 20px;
+    &__h1 {
+      font-size: 57px;
+      line-height: 45px;
+      letter-spacing: -2.5%;
+    }
+  }
+  .projects {
+    padding: 0 20px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .card {
+    &__h3 {
+      font-size: var(--display-xs);
+      line-height: 32px;
+    }
+  }
+  .about,
+  .skills {
+    &__wrapper {
+      padding: 40px 20px;
+    }
+    &__h2 {
+      font-size: var(--display-sm);
+      line-height: 40px;
+    }
+  }
+  .contact {
+    padding: 48px 20px;
+    &__h2 {
+      font-size: var(--display-sm);
+      line-height: 40px;
+    }
+    &__info {
+      gap: 16px;
+    }
+    &__wrapper-left {
+      gap: 32px;
+    }
+  }
+  .footer {
+    padding: 0 20px;
+    text-align: center;
+  }
+  .form {
+    padding: 24px;
+  }
 }
