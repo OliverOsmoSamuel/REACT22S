@@ -163,6 +163,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #ccc;
+  overflow: hidden;
   &__background {
     position: absolute;
     top: 0;
@@ -216,6 +217,18 @@ body {
   color: var(--dark-blue);
   &__img {
     border-radius: 8px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__img-container {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
   }
   &__main {
     display: flex;
@@ -422,8 +435,21 @@ body {
     &:last-child {
       grid-area: 2 / 1 / span 1 / span 2;
     }
+
     &__img {
-      height: 328px;
+      border-radius: 8px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__img-container {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        padding-bottom: 50%;
+      }
     }
   }
   .about,
