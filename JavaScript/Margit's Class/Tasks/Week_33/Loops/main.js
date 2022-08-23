@@ -76,3 +76,28 @@ let loop7 = () => {
     null;
   }
 };
+
+//loop 8
+
+let howManyNum = +prompt(`How many numbers do you want to input`),
+    smallestNum = 99999;
+for (let num = howManyNum; num > 0; num--) {
+  let inputNum = +prompt(`Input Number | input ${num} out of ${howManyNum}`);
+  smallestNum > inputNum  ? smallestNum = inputNum : null;
+}
+
+//loop 9 
+
+let biggestNum = 0.00001,
+  secondBiggestNum = 0.00002;
+
+for (let num = 1; num <= 10; num++) {
+  let inputNum = prompt(`Input a Number | input ${num} out of 10`);
+
+  inputNum != +inputNum ? console.log(`'${String(inputNum)}' is an invalid input. Numbers only.`) :
+  inputNum > secondBiggestNum && inputNum < biggestNum
+    ? (secondBiggestNum = inputNum)
+    : inputNum > biggestNum
+    ? ((secondBiggestNum = biggestNum), (biggestNum = inputNum))
+    : null;
+}
