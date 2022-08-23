@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gasoline price calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="script.js" async></script>
+
+  <body>
+    <div class="header">
+      <h2 class="header__h2">Gasoline price calculator</h2>
+      <p class="header__p">
+        Make a program that asks the price of the gasoline and the amount of
+        money from the user. The program calculates how much gasoline the user
+        gets with the money. The result is displayed on to screen. If there are
+        more than 10 litres, then message on the screen: "good, you can escape
+        now" if less, it shows the message: "Ups, you have to stay here."
+      </p>
+    </div>
+    <form class="form">
+      <div class="form__wrapper">
+        <label class="form__label" for="form__input-price">Gas Price </label>
+        <input class="form__input" id="form__input-price" type="text" />
+        <!-- missing input or wrong input -->
+        <div
+          id="form__feedback-price--error"
+          class="form__feedback-price--error"
+        ></div>
+      </div>
+      <div class="form__wrapper">
+        <label class="form__label" for="form__input-money">Money </label>
+        <input class="form__input" id="form__input-money" type="text" />
+        <!-- missing input or wrong input -->
+        <div
+          id="form__feedback-money--error"
+          class="form__feedback-money--error"
+        ></div>
+      </div>
+      <input
+        onclick="calculateGasoline()"
+        class="form__button"
+        type="button"
+        value="Submit"
+      />
+      <div class="form__output" id="form__output"></div>
+    </form>
+  </body>
+</html>
