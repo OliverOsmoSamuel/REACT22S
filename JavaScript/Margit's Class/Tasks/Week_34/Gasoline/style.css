@@ -185,11 +185,11 @@ body {
 }
 .form__output {
   font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
+  font-weight: 400;
+  line-height: 16px;
 }
 .form__feedback-price--error, .form__feedback-money--error {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 20px;
   color: red;

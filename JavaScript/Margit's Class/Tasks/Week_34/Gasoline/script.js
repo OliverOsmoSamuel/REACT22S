@@ -42,13 +42,12 @@ let calculateGasoline = () => {
         .getElementById("form__input-money")
         .classList.remove("form__input--error"));
 
-  if (money / price >= 10) {
-    document.getElementById("form__output").textContent =
-      "Good, you can escape now";
-  } else if (money / price < 10) {
-    document.getElementById("form__output").textContent =
-      "Ups, you have to stay here.";
-  } else {
-    document.getElementById("form__output").textContent = "";
-  }
+  // output
+  money / price >= 10
+    ? (document.getElementById("form__output").textContent =
+        "Good, you can escape now")
+    : money / price < 10
+    ? (document.getElementById("form__output").textContent =
+        "Ups, you have to stay here.")
+    : (document.getElementById("form__output").textContent = "");
 };
