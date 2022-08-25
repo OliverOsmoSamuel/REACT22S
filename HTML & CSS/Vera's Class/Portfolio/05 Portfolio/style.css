@@ -631,6 +631,7 @@ body {
     margin-bottom: 16px;
   }
   .about__wrapper {
+    padding: 80px 40px;
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -714,14 +715,21 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .about__wrapper,
-.skills__wrapper {
+  .about__wrapper {
     padding: 40px 20px;
   }
-  .about__h2,
-.skills__h2 {
+  .about__h2 {
     font-size: var(--display-sm);
     line-height: 40px;
+  }
+  .skills {
+    padding: 48px 20px;
+  }
+  .skills__cards-wrapper {
+    gap: 24px;
+  }
+  .skills__card {
+    grid-column: span 4;
   }
   .contact {
     padding: 48px 20px;

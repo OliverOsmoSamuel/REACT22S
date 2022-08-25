@@ -643,6 +643,7 @@ body {
       margin-bottom: 16px;
     }
     &__wrapper {
+      padding: 80px 40px;
       padding-top: 80px;
       padding-bottom: 80px;
     }
@@ -742,8 +743,7 @@ body {
     }
   }
 
-  .about,
-  .skills {
+  .about {
     &__wrapper {
       padding: 40px 20px;
     }
@@ -752,6 +752,17 @@ body {
       line-height: 40px;
     }
   }
+
+  .skills {
+    padding: 48px 20px;
+    &__cards-wrapper {
+      gap: 24px;
+    }
+    &__card {
+      grid-column: span 4;
+    }
+  }
+
   .contact {
     padding: 48px 20px;
     &__h2 {
