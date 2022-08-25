@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio 05</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="script.js" async></script>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="navbar__logo">Oliver Janhunen</div>
+      <ul class="navbar__links">
+        <li class="navbar__link">
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="navbar__link"><a href="#about">About Me</a></li>
+        <li class="navbar__link"><a href="#skills">Skills</a></li>
+        <li class="navbar__link"><a href="#contact">Contact</a></li>
+      </ul>
+      <!-- mobile links -->
+      <ul id="navbar__links-mobile" class="navbar__links-mobile">
+        <li class="navbar__link-mobile">
+          <a onclick="navToggle()" href="#projects">Projects</a>
+        </li>
+        <li onclick="navToggle()" class="navbar__link-mobile">
+          <a href="#about">About Me</a>
+        </li>
+        <li onclick="navToggle()" class="navbar__link-mobile">
+          <a href="#skills">Skills</a>
+        </li>
+        <li onclick="navToggle()" class="navbar__link-mobile">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <div class="navbar__hamburger-menu" onclick="navToggle()">
+        <img src="/assets/hamburger-closed.svg" alt="" />
+      </div>
+    </nav>
+    <!-- Hero -->
+    <div class="hero">
+      <h1 class="hero__h1">WELCOME TO MY WEBSITE</h1>
+
+      <img
+        class="hero__background hero__background-top"
+        src="/assets/bear_top.png"
+        alt=""
+      />
+      <img
+        class="hero__background hero__background-bot"
+        src="/assets/bear_bottom.png"
+        alt=""
+      />
+    </div>
+    <!-- Projects -->
+    <div class="projects section" id="projects">
+      <h2 class="projects__h2">Projects</h2>
+      <div class="projects__wrapper">
+        <!-- Card -->
+        <div class="card">
+          <div class="card__img-container">
+            <img src="/assets/projects_1.png" alt="" class="card__img" />
+          </div>
+          <div class="card__main">
+            <h3 class="card__h3">Static Website</h3>
+            <p class="card__p">HTML, CSS, JavaScript</p>
+            <a class="card__a" href="#"
+              >See More <img src="/assets/arrow_right.svg" alt=""
+            /></a>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="card">
+          <div class="card__img-container">
+            <img src="/assets/projects_2.png" alt="" class="card__img" />
+          </div>
+          <div class="card__main">
+            <h3 class="card__h3">Static Website</h3>
+            <p class="card__p">HTML, CSS, JavaScript</p>
+            <a class="card__a" href="#"
+              >See More <img src="/assets/arrow_right.svg" alt=""
+            /></a>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="card">
+          <div class="card__img-container card__last">
+            <img
+              src="/assets/projects_3.png"
+              alt=""
+              class="card__img card__last-img"
+            />
+          </div>
+          <div class="card__main">
+            <h3 class="card__h3">Static Website</h3>
+            <p class="card__p">HTML, CSS, JavaScript</p>
+            <a class="card__a" href="#"
+              >See More <img src="/assets/arrow_right.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About -->
+    <div class="about" id="about">
+      <img class="about__img" src="/assets/about.png" alt="" />
+      <div class="about__wrapper">
+        <h2 class="about__h2">About Me</h2>
+        <p class="about__p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum
+          diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem
+          egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non.
+          Non commodo volutpat, pharetra, vel.
+        </p>
+      </div>
+    </div>
+    <!-- Skills -->
+    <div class="skills" id="skills">
+      <div class="skills__wrapper">
+        <h2 class="skills__h2">Skills</h2>
+        <p class="skills__p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum
+          diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem
+          egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non.
+          Non commodo volutpat, pharetra, vel.
+        </p>
+      </div>
+      <img class="skills__img" src="/assets/skills.png" alt="" />
+    </div>
+    <!-- Contact -->
+    <div class="contact" id="contact">
+      <!-- Left -->
+      <div class="contact__container">
+        <div class="contact__wrapper-left">
+          <div class="contact__title">
+            <h2 class="contact__h2">Contact Me</h2>
+            <p class="contact__p">
+              Have an enquiry? Fill out the form to contact me
+            </p>
+          </div>
+
+          <ul class="contact__info">
+            <li href="" class="contact__a">
+              <img src="/assets/phone.svg" alt="" />+0123456789
+            </li>
+            <li href="" class="contact__a">
+              <img src="/assets/email.svg" alt="" /> hello@my.email
+            </li>
+            <li href="" class="contact__a">
+              <img src="/assets/pin.svg" alt="" />
+              6391 Elgin St. Celina, Delaware 10299
+            </li>
+          </ul>
+
+          <ul class="contact__socials">
+            <li class="contact__li">
+              <a href="" class="contact__a"
+                ><img src="/assets/instagram.svg" alt=""
+              /></a>
+            </li>
+            <li class="contact__li">
+              <a href="" class="contact__a"
+                ><img src="/assets/dribble.svg" alt=""
+              /></a>
+            </li>
+            <li class="contact__li">
+              <a href="" class="contact__a"
+                ><img src="/assets/twitter.svg" alt=""
+              /></a>
+            </li>
+            <li class="contact__li">
+              <a href="" class="contact__a"
+                ><img src="/assets/youtube.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- Right -->
+        <div class="contact__wrapper-right">
+          <form action="" class="form">
+            <div class="form__wrapper">
+              <label class="form__label" for="name">Name</label>
+              <input class="form__input" id="name" type="text" required />
+            </div>
+            <div class="form__wrapper">
+              <label class="form__label" for="email">Email</label>
+              <input class="form__input" id="email" type="email" required />
+            </div>
+            <div class="form__wrapper">
+              <label class="form__label" for="message">Message</label>
+              <textarea
+                class="form__textarea"
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                required
+              ></textarea>
+            </div>
+
+            <input class="form__button" type="button" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">© 2021 Oliver Janhunen. All rights reserved</footer>
+  </body>
+</html>
