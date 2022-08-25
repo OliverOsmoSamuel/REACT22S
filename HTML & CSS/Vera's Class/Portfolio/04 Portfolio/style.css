@@ -185,6 +185,14 @@ body {
   font-weight: 600;
   padding: 4px 8px;
 }
+.navbar__link:hover {
+  opacity: 0.94;
+  text-decoration: underline;
+}
+.navbar__link:active {
+  opacity: 0.88;
+  text-decoration: underline;
+}
 .navbar__link-mobile {
   display: flex;
   align-items: center;
@@ -217,7 +225,6 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background-position: center left;
 }
 .hero__background-top {
   z-index: 1;
@@ -399,6 +406,12 @@ body {
   border-radius: 100%;
   background-color: #2e2e2e;
 }
+.contact__li:hover {
+  opacity: 0.96;
+}
+.contact__li:active {
+  opacity: 0.92;
+}
 .contact__socials {
   display: flex;
   gap: 24px;
@@ -441,6 +454,12 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   color: var(--white);
+}
+.form__button:hover {
+  opacity: 0.96;
+}
+.form__button:active {
+  opacity: 0.92;
 }
 
 .footer {
@@ -626,8 +645,10 @@ body {
     gap: 32px;
   }
   .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0 20px;
-    text-align: center;
   }
   .form {
     padding: 24px;
