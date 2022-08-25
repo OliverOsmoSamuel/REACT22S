@@ -12,7 +12,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" async></script>
   </head>
+
   <body>
     <!-- navbar -->
     <nav class="navbar">
@@ -25,16 +27,28 @@
         <li class="navbar__link"><a href="#skills">Skills</a></li>
         <li class="navbar__link"><a href="#contact">Contact</a></li>
       </ul>
-      <div class="navbar__hamburger-menu">
+      <!-- mobile links -->
+      <ul id="navbar__links-mobile" class="navbar__links-mobile">
+        <li class="navbar__link-mobile">
+          <a onclick="navToggle()" href="#projects">Projects</a>
+        </li>
+        <li onclick="navToggle()" class="navbar__link-mobile">
+          <a href="#about">About Me</a>
+        </li>
+        <li onclick="navToggle()" class="navbar__link-mobile">
+          <a href="#skills">Skills</a>
+        </li>
+        <li onclick="navToggle()" class="navbar__link-mobile">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <div class="navbar__hamburger-menu" onclick="navToggle()">
         <img src="/assets/hamburger-closed.svg" alt="" />
       </div>
     </nav>
     <!-- Hero -->
     <div class="hero">
-      <h1 class="hero__h1">
-        WELCOME TO <br />
-        MY WEBSITE
-      </h1>
+      <h1 class="hero__h1">WELCOME TO MY WEBSITE</h1>
 
       <img
         class="hero__background hero__background-top"
