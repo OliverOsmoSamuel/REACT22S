@@ -18,6 +18,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -135,6 +137,7 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 2;
+
   &__logo {
     font-size: var(--body-xl);
     font-weight: 600;
@@ -151,6 +154,9 @@ body {
     font-size: var(--body-sm);
     font-weight: 600;
     padding: 4px 8px;
+  }
+  &__hamburger-menu {
+    display: none;
   }
 }
 
@@ -195,8 +201,8 @@ body {
 
 .projects {
   padding: 0 40px;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   &__h2 {
     font-size: var(--display-lg);
     font-weight: 700;
@@ -411,6 +417,17 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar {
+    &__links {
+      display: none;
+    }
+    &__hamburger-menu {
+      display: block;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
   .hero {
     &__h1 {
       font-size: 80px;
@@ -435,15 +452,7 @@ body {
     &:last-child {
       grid-area: 2 / 1 / span 1 / span 2;
     }
-
-    &__img {
-      border-radius: 8px;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    &__img-container {
+    &__last {
       position: relative;
       &::after {
         content: "";
@@ -451,7 +460,15 @@ body {
         padding-bottom: 50%;
       }
     }
+    &__last-img {
+      border-radius: 8px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
+
   .about,
   .skills {
     display: flex;
@@ -497,9 +514,6 @@ body {
 }
 
 @media only screen and (max-width: 375px) {
-  .navbar {
-    display: none;
-  }
   .hero {
     padding: 0 20px;
     &__h1 {
@@ -517,12 +531,27 @@ body {
       flex-direction: column;
     }
   }
+
   .card {
-    &__h3 {
-      font-size: var(--display-xs);
-      line-height: 32px;
+    font-size: var(--display-xs);
+    line-height: 32px;
+    &__last {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
+    &__last-img {
+      border-radius: 8px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
+
   .about,
   .skills {
     &__wrapper {

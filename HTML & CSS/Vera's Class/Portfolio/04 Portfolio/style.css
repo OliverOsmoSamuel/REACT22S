@@ -16,6 +16,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -162,6 +163,9 @@ body {
   font-weight: 600;
   padding: 4px 8px;
 }
+.navbar__hamburger-menu {
+  display: none;
+}
 
 /* Hero */
 .hero {
@@ -203,8 +207,8 @@ body {
 /* Projects */
 .projects {
   padding: 0 40px;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .projects__h2 {
   font-size: var(--display-lg);
@@ -420,6 +424,15 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+  .navbar__hamburger-menu {
+    display: block;
+  }
+  .navbar__hamburger-menu:hover {
+    cursor: pointer;
+  }
   .hero__h1 {
     font-size: 80px;
     font-weight: 700;
@@ -439,21 +452,21 @@ body {
   .card:last-child {
     grid-area: 2/1/span 1/span 2;
   }
-  .card__img {
+  .card__last {
+    position: relative;
+  }
+  .card__last::after {
+    content: "";
+    display: block;
+    padding-bottom: 50%;
+  }
+  .card__last-img {
     border-radius: 8px;
     position: absolute;
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-  }
-  .card__img-container {
-    position: relative;
-  }
-  .card__img-container::after {
-    content: "";
-    display: block;
-    padding-bottom: 50%;
   }
   .about,
 .skills {
@@ -497,9 +510,6 @@ body {
   }
 }
 @media only screen and (max-width: 375px) {
-  .navbar {
-    display: none;
-  }
   .hero {
     padding: 0 20px;
   }
@@ -517,9 +527,25 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .card__h3 {
+  .card {
     font-size: var(--display-xs);
     line-height: 32px;
+  }
+  .card__last {
+    position: relative;
+  }
+  .card__last::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  .card__last-img {
+    border-radius: 8px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .about__wrapper,
 .skills__wrapper {

@@ -19,12 +19,15 @@
       <div class="navbar__logo">Oliver Janhunen</div>
       <ul class="navbar__links">
         <li class="navbar__link">
-          <a href="projects">Projects</a>
+          <a href="#projects">Projects</a>
         </li>
-        <li class="navbar__link"><a href="about">About Me</a></li>
-        <li class="navbar__link"><a href="skills">Skills</a></li>
-        <li class="navbar__link"><a href="contact">Contact</a></li>
+        <li class="navbar__link"><a href="#about">About Me</a></li>
+        <li class="navbar__link"><a href="#skills">Skills</a></li>
+        <li class="navbar__link"><a href="#contact">Contact</a></li>
       </ul>
+      <div class="navbar__hamburger-menu">
+        <img src="/assets/hamburger-closed.svg" alt="" />
+      </div>
     </nav>
     <!-- Hero -->
     <div class="hero">
@@ -45,7 +48,7 @@
       />
     </div>
     <!-- Projects -->
-    <div class="projects section">
+    <div class="projects section" id="projects">
       <h2 class="projects__h2">Projects</h2>
       <div class="projects__wrapper">
         <!-- Card -->
@@ -76,8 +79,12 @@
         </div>
         <!-- Card -->
         <div class="card">
-          <div class="card__img-container">
-            <img src="/assets/projects_3.png" alt="" class="card__img" />
+          <div class="card__img-container card__last">
+            <img
+              src="/assets/projects_3.png"
+              alt=""
+              class="card__img card__last-img"
+            />
           </div>
           <div class="card__main">
             <h3 class="card__h3">Static Website</h3>
@@ -90,7 +97,7 @@
       </div>
     </div>
     <!-- About -->
-    <div class="about">
+    <div class="about" id="about">
       <img class="about__img" src="/assets/about.png" alt="" />
       <div class="about__wrapper">
         <h2 class="about__h2">About Me</h2>
@@ -103,7 +110,7 @@
       </div>
     </div>
     <!-- Skills -->
-    <div class="skills">
+    <div class="skills" id="skills">
       <div class="skills__wrapper">
         <h2 class="skills__h2">Skills</h2>
         <p class="skills__p">
@@ -116,7 +123,7 @@
       <img class="skills__img" src="/assets/skills.png" alt="" />
     </div>
     <!-- Contact -->
-    <div class="contact">
+    <div class="contact" id="contact">
       <!-- Left -->
       <div class="contact__container">
         <div class="contact__wrapper-left">
