@@ -111,6 +111,10 @@ meter {
   --bg-black: #111111;
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 body {
   font-family: "Inter", sans-serif;
   position: relative;
@@ -125,19 +129,40 @@ body {
 
 .navbar {
   padding: 0 40px;
+  top: 0;
   left: 0;
   right: 0;
-  max-width: 1216px;
   margin: 0 auto;
-  position: absolute;
+  position: fixed;
   height: 80px;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 2;
-
+  color: #fff;
+  background-color: none;
+  &--scrolled {
+    padding: 0 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: var(--bg-black);
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1216px;
+  }
   &__logo {
     font-size: var(--body-xl);
     font-weight: 600;
@@ -157,7 +182,6 @@ body {
       right: 0;
       width: 100%;
       height: calc(100vh - 80px);
-      background-color: #fff;
       padding: 24px 0;
       &--open {
         display: block;
@@ -167,7 +191,6 @@ body {
         right: 0;
         width: 100%;
         height: calc(100vh - 80px);
-        background-color: #fff;
         padding: 24px 0;
       }
     }
@@ -257,6 +280,8 @@ body {
   }
 }
 
+/* Card */
+
 .card {
   display: flex;
   flex-direction: column;
@@ -302,8 +327,9 @@ body {
   }
 }
 
-.about,
-.skills {
+/* About */
+
+.about {
   background-color: var(--bg-white);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -332,6 +358,84 @@ body {
     max-width: 700px;
   }
 }
+
+/* Skills */
+
+.skills {
+  padding: 96px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  &__heading-wrapper {
+    max-width: 1216px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__h2 {
+    font-size: var(--display-lg);
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: -2.5%;
+  }
+  &__p {
+    font-size: var(--body-lg);
+    font-weight: 400;
+    line-height: 28px;
+  }
+  &__cards-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+    max-width: 1216px;
+  }
+  &__card {
+    box-shadow: 0px 12px 16px -4px rgba(17, 24, 39, 0.1),
+      0px 4px 6px -2px rgba(17, 24, 39, 0.05);
+    border-top: 2px #fcfcfc solid;
+    &-main {
+      padding: 32px 0;
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &-title {
+      font-size: var(--body-lg);
+      font-weight: 400;
+      line-height: 28px;
+    }
+    &-logo {
+      height: 64px;
+      width: 64px;
+    }
+  }
+  &__progress {
+    background-color: #474a57; // progress bar color
+    height: 8px;
+    &-html {
+      width: 80%;
+    }
+    &-css {
+      width: 70%;
+    }
+    &-js {
+      width: 60%;
+    }
+    &-react {
+      width: 80%;
+    }
+    &-wrapper {
+      width: 100%;
+      background-color: #d9dbe1; // progress bar background color
+    }
+  }
+}
+
+/* Contact */
 
 .contact {
   padding: 0 40px;
@@ -414,6 +518,8 @@ body {
   }
 }
 
+/* Form */
+
 .form {
   display: flex;
   flex-direction: column;
@@ -456,6 +562,8 @@ body {
   }
 }
 
+/* Footer */
+
 .footer {
   padding: 0 40px;
   font-size: var(--body-sm);
@@ -468,6 +576,8 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+/* Media Breakpoints */
 
 @media only screen and (max-width: 768px) {
   .navbar {
@@ -522,8 +632,7 @@ body {
     }
   }
 
-  .about,
-  .skills {
+  .about {
     display: flex;
     flex-direction: column;
     &__h2 {
@@ -538,13 +647,10 @@ body {
       padding-bottom: 80px;
     }
   }
+
   .skills {
-    flex-direction: column-reverse;
-    &__wrapper {
-      &__p {
-        grid-column-start: 1;
-        grid-row-end: 1;
-      }
+    &__card {
+      grid-column: span 2;
     }
   }
   .contact {

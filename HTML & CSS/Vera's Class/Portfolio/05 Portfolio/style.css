@@ -119,6 +119,10 @@ meter {
   --bg-black: #111111;
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 body {
   font-family: "Inter", sans-serif;
   position: relative;
@@ -132,18 +136,40 @@ body {
 /* Navbar */
 .navbar {
   padding: 0 40px;
+  top: 0;
   left: 0;
   right: 0;
-  max-width: 1216px;
   margin: 0 auto;
-  position: absolute;
+  position: fixed;
   height: 80px;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 2;
+  color: #fff;
+  background-color: none;
+}
+.navbar--scrolled {
+  padding: 0 40px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-color: var(--bg-black);
+}
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1216px;
 }
 .navbar__logo {
   font-size: var(--body-xl);
@@ -166,7 +192,6 @@ body {
   right: 0;
   width: 100%;
   height: calc(100vh - 80px);
-  background-color: #fff;
   padding: 24px 0;
 }
 .navbar__links-mobile--open {
@@ -177,7 +202,6 @@ body {
   right: 0;
   width: 100%;
   height: calc(100vh - 80px);
-  background-color: #fff;
   padding: 24px 0;
 }
 .navbar__link {
@@ -262,6 +286,7 @@ body {
   grid-gap: 32px;
 }
 
+/* Card */
 .card {
   display: flex;
   flex-direction: column;
@@ -308,39 +333,110 @@ body {
   padding: 12px 0;
 }
 
-.about,
-.skills {
+/* About */
+.about {
   background-color: var(--bg-white);
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: var(--dark-blue);
 }
-.about__wrapper,
-.skills__wrapper {
+.about__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 32px;
 }
-.about__img,
-.skills__img {
+.about__img {
   width: 100%;
 }
-.about__h2,
-.skills__h2 {
+.about__h2 {
   font-size: var(--display-lg);
   font-weight: 700;
   line-height: 60px;
   margin-bottom: 32px;
 }
-.about__p,
-.skills__p {
+.about__p {
   font-size: var(--body-md);
   font-weight: 400;
   line-height: 28px;
   max-width: 700px;
 }
 
+/* Skills */
+.skills {
+  padding: 96px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+.skills__heading-wrapper {
+  max-width: 1216px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills__h2 {
+  font-size: var(--display-lg);
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -2.5%;
+}
+.skills__p {
+  font-size: var(--body-lg);
+  font-weight: 400;
+  line-height: 28px;
+}
+.skills__cards-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 32px;
+  max-width: 1216px;
+}
+.skills__card {
+  box-shadow: 0px 12px 16px -4px rgba(17, 24, 39, 0.1), 0px 4px 6px -2px rgba(17, 24, 39, 0.05);
+  border-top: 2px #fcfcfc solid;
+}
+.skills__card-main {
+  padding: 32px 0;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.skills__card-title {
+  font-size: var(--body-lg);
+  font-weight: 400;
+  line-height: 28px;
+}
+.skills__card-logo {
+  height: 64px;
+  width: 64px;
+}
+.skills__progress {
+  background-color: #474a57;
+  height: 8px;
+}
+.skills__progress-html {
+  width: 80%;
+}
+.skills__progress-css {
+  width: 70%;
+}
+.skills__progress-js {
+  width: 60%;
+}
+.skills__progress-react {
+  width: 80%;
+}
+.skills__progress-wrapper {
+  width: 100%;
+  background-color: #d9dbe1;
+}
+
+/* Contact */
 .contact {
   padding: 0 40px;
   background-image: url(/assets/bear_contact.png);
@@ -418,6 +514,7 @@ body {
   align-items: center;
 }
 
+/* Form */
 .form {
   display: flex;
   flex-direction: column;
@@ -462,6 +559,7 @@ body {
   opacity: 0.92;
 }
 
+/* Footer */
 .footer {
   padding: 0 40px;
   font-size: var(--body-sm);
@@ -475,6 +573,7 @@ body {
   justify-content: center;
 }
 
+/* Media Breakpoints */
 @media only screen and (max-width: 768px) {
   .navbar__links {
     display: none;
@@ -520,30 +619,23 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .about,
-.skills {
+  .about {
     display: flex;
     flex-direction: column;
   }
-  .about__h2,
-.skills__h2 {
+  .about__h2 {
     font-size: var(--display-md);
     font-weight: 700;
     line-height: 45px;
     letter-spacing: -2.5%;
     margin-bottom: 16px;
   }
-  .about__wrapper,
-.skills__wrapper {
+  .about__wrapper {
     padding-top: 80px;
     padding-bottom: 80px;
   }
-  .skills {
-    flex-direction: column-reverse;
-  }
-  .skills__wrapper__p {
-    grid-column-start: 1;
-    grid-row-end: 1;
+  .skills__card {
+    grid-column: span 2;
   }
   .contact__h2 {
     font-size: var(--display-md);

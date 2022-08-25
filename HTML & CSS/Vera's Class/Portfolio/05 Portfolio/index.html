@@ -12,43 +12,45 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <script src="script.js" async></script>
   </head>
 
   <body>
     <!-- navbar -->
-    <nav class="navbar">
-      <div class="navbar__logo">Oliver Janhunen</div>
-      <ul class="navbar__links">
-        <li class="navbar__link">
-          <a href="#projects">Projects</a>
-        </li>
-        <li class="navbar__link"><a href="#about">About Me</a></li>
-        <li class="navbar__link"><a href="#skills">Skills</a></li>
-        <li class="navbar__link"><a href="#contact">Contact</a></li>
-      </ul>
-      <!-- mobile links -->
-      <ul id="navbar__links-mobile" class="navbar__links-mobile">
-        <li class="navbar__link-mobile">
-          <a onclick="navToggle()" href="#projects">Projects</a>
-        </li>
-        <li onclick="navToggle()" class="navbar__link-mobile">
-          <a href="#about">About Me</a>
-        </li>
-        <li onclick="navToggle()" class="navbar__link-mobile">
-          <a href="#skills">Skills</a>
-        </li>
-        <li onclick="navToggle()" class="navbar__link-mobile">
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-      <div class="navbar__hamburger-menu" onclick="navToggle()">
-        <img src="/assets/hamburger-closed.svg" alt="" />
+    <nav id="navbar" class="navbar">
+      <div class="navbar__container">
+        <a href="#" class="navbar__logo">Oliver Janhunen</a>
+        <ul class="navbar__links">
+          <li class="navbar__link">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="navbar__link"><a href="#about">About Me</a></li>
+          <li class="navbar__link"><a href="#skills">Skills</a></li>
+          <li class="navbar__link"><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- mobile links -->
+        <ul id="navbar__links-mobile" class="navbar__links-mobile">
+          <li class="navbar__link-mobile">
+            <a onclick="navToggle()" href="#projects">Projects</a>
+          </li>
+          <li onclick="navToggle()" class="navbar__link-mobile">
+            <a href="#about">About Me</a>
+          </li>
+          <li onclick="navToggle()" class="navbar__link-mobile">
+            <a href="#skills">Skills</a>
+          </li>
+          <li onclick="navToggle()" class="navbar__link-mobile">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="navbar__hamburger-menu" onclick="navToggle()">
+          <img src="/assets/hamburger-closed.svg" alt="" />
+        </div>
       </div>
     </nav>
     <!-- Hero -->
-    <div class="hero">
+    <div id="hero" class="hero">
       <h1 class="hero__h1">WELCOME TO MY WEBSITE</h1>
 
       <img
@@ -126,16 +128,69 @@
     </div>
     <!-- Skills -->
     <div class="skills" id="skills">
-      <div class="skills__wrapper">
+      <div class="skills__heading-wrapper">
         <h2 class="skills__h2">Skills</h2>
         <p class="skills__p">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum
-          diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem
-          egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non.
-          Non commodo volutpat, pharetra, vel.
+          The coding languages I use and my level of proficiency in them
         </p>
       </div>
-      <img class="skills__img" src="/assets/skills.png" alt="" />
+      <div class="skills__cards-wrapper">
+        <div class="skills__card">
+          <div class="skills__card-main">
+            <img
+              class="skills__card-logo"
+              src="/assets/html.svg"
+              alt="html logo"
+            />
+
+            <div class="skills__card-title">HTML</div>
+          </div>
+          <div class="skills__progress-wrapper">
+            <div class="skills__progress skills__progress-html"></div>
+          </div>
+        </div>
+        <div class="skills__card">
+          <div class="skills__card-main">
+            <img
+              class="skills__card-logo"
+              src="/assets/css.svg"
+              alt="html logo"
+            />
+
+            <div class="skills__card-title">CSS</div>
+          </div>
+          <div class="skills__progress-wrapper">
+            <div class="skills__progress skills__progress-css"></div>
+          </div>
+        </div>
+        <div class="skills__card">
+          <div class="skills__card-main">
+            <img
+              class="skills__card-logo"
+              src="/assets/js.svg"
+              alt="JavaScript logo"
+            />
+
+            <div class="skills__card-title">JavaScript</div>
+          </div>
+          <div class="skills__progress-wrapper">
+            <div class="skills__progress skills__progress-js"></div>
+          </div>
+        </div>
+        <div class="skills__card">
+          <div class="skills__card-main">
+            <img
+              class="skills__card-logo"
+              src="/assets/react.svg"
+              alt="ReactJS logo"
+            />
+            <div class="skills__card-title">ReactJS</div>
+          </div>
+          <div class="skills__progress-wrapper">
+            <div class="skills__progress skills__progress-react"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Contact -->
     <div class="contact" id="contact">
