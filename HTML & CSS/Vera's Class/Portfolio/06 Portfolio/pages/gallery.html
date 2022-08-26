@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio 05/Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- for nav and footer -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- for gallery section -->
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <script src="/script.js" async></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav id="navbar" class="navbar">
+      <div class="navbar__container">
+        <a href="#" class="navbar__logo">Oliver Janhunen</a>
+        <ul class="navbar__links">
+          <li class="navbar__link">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="navbar__link"><a href="#about">About Me</a></li>
+          <li class="navbar__link"><a href="#skills">Skills</a></li>
+          <li class="navbar__link"><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- mobile links -->
+        <ul id="navbar__links-mobile" class="navbar__links-mobile">
+          <li class="navbar__link-mobile">
+            <a onclick="navToggle()" href="#projects">Projects</a>
+          </li>
+          <li onclick="navToggle()" class="navbar__link-mobile">
+            <a href="#about">About Me</a>
+          </li>
+          <li onclick="navToggle()" class="navbar__link-mobile">
+            <a href="#skills">Skills</a>
+          </li>
+          <li onclick="navToggle()" class="navbar__link-mobile">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="navbar__hamburger-menu" onclick="navToggle()">
+          <img src="/assets/hamburger-closed.svg" alt="" />
+        </div>
+      </div>
+    </nav>
+    <!-- footer -->
+    <footer class="footer">© 2021 Oliver Janhunen. All rights reserved</footer>
+  </body>
+</html>
