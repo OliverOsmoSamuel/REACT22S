@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Anek Telugu", sans-serif;
+  font-family: sans-serif;
 }
 
 .container {
@@ -13,6 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #f4f2f1;
+  padding: 0 40px;
 }
 
 .header,
@@ -29,7 +30,8 @@ body {
 }
 .header__h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 26px;
+  font-weight: 600;
   margin: 0 0 16px;
 }
 .header__p {
@@ -37,31 +39,96 @@ body {
 }
 
 .main {
+  padding: 80px 24px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   background-color: #dcebff;
 }
 
 .form {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto repeat(2, 1fr) 0.5fr;
+  grid-template-rows: repeat(3, 1fr);
   gap: 32px;
+}
+.form__image {
+  background-image: url("/assets/data5.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80%;
+  width: 80%;
+}
+.form__image-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: span 3;
+  grid-column: span 2;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px rgb(139, 138, 141) solid;
+}
+.form__wrapper {
+  grid-row: span 1;
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+}
+.form__wrapper-checkbox {
+  grid-column: span 2;
+  grid-row: span;
+}
+.form__wrapper-checkbox input {
+  width: 16px;
+  height: 16px;
+  margin-left: 32px;
+}
+.form__wrapper-checkbox input:first-of-type {
+  background-color: red;
+  margin-left: 8px;
+}
+.form__wrapper-checkbox label {
+  margin-left: 8px;
+}
+.form__button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  grid-column: span 4;
 }
 .form__label {
   color: #0a0a0a;
   font-size: 16px;
+  line-height: 16px;
 }
 .form__title {
+  margin-bottom: 4px;
   font-size: 14px;
 }
-.form__input-wrapper {
-  display: flex;
-  flex-direction: column;
+.form__input[type=checkbox] {
+  transition-duration: 0.3s;
+  background-color: #41b883;
 }
-.form__input[type=text] {
+.form__input[type=text], .form__input[type=number] {
   height: 40px;
   background-color: fff;
-  border-radius: 0;
+  border-radius: 4px;
   border: 1px rgb(139, 138, 141) solid;
-  width: 300px;
+}
+
+#button {
+  font-family: sans-serif;
+  font-size: 16px;
+  height: 40px;
+  background-color: #00005e;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 24px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

@@ -19,36 +19,40 @@
       <header class="header">
         <h1 class="header__h1">Calculate your insurance price</h1>
         <p class="heapder__p">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo
-          cumque modi dolores qui quibusdam tempora vel corrupti eum fuga aut,
-          doloremque facilis dolorum, reiciendis optio excepturi, eius nam
-          impedit. Alias omnis fugiat illum illo, pariatur accusamus deserunt a
-          repellendus ex vero distinctio in hic ratione, quo laboriosam
-          recusandae possimus.
+          First, tell me about yourself. Based on your age, income and family
+          situation, we recommend you life insurance, serious illness insurance
+          or permanent disability insurance. At the same time, you will see an
+          estimate of the monthly price of the insurance. Calculating the price
+          does not bind you to a purchase.
         </p>
       </header>
       <main class="main">
         <form class="form">
-          <div class="form__wrapper">
-            <div class="form__input-wrapper">
-              <label for="name" class="form__label form__title">Name</label>
-              <input type="text" id="name" class="form__input" />
-            </div>
-            <div class="form__input-wrapper">
-              <label for="age" class="form__label form__title">Age</label>
-              <input type="text" id="age" class="form__input" />
-            </div>
+          <div class="form__image-background">
+            <div class="form__image"></div>
           </div>
-          <div class="form__checkbox-wrapper">
-            <!-- Current Health -->
-            <div class="form__wrapper">
+          <div class="form__wrapper">
+            <label for="name" class="form__label form__title">Name</label>
+            <input type="text" id="name" class="form__input" />
+          </div>
+          <div class="form__wrapper">
+            <label for="age" class="form__label form__title">Age</label>
+            <input type="number" id="age" class="form__input" />
+          </div>
+
+          <!-- Current Health -->
+          <div class="form__wrapper-checkbox">
+            <p class="form__title">
+              Click all health conditions that you have at the moment
+            </p>
+            <div class="wrapper">
               <input
                 type="checkbox"
                 name="currHealth"
                 id="hypertension"
                 value="Hypertension"
               />
-              <label for="Hypertension" class="form__label">Hypertension</label>
+              <label for="hypertension" class="form__label">Hypertension</label>
               <input
                 type="checkbox"
                 name="currHealth"
@@ -64,8 +68,13 @@
               />
               <label for="overweight">Overweight</label>
             </div>
-            <!-- habits -->
-            <div class="form__wrapper">
+          </div>
+          <!-- habits -->
+          <div class="form__wrapper-checkbox">
+            <p class="form__title">
+              Click all of the habits below that you do on a regular basis
+            </p>
+            <div class="wrapper">
               <input
                 type="checkbox"
                 name="habits"
@@ -87,12 +96,58 @@
                 value="Daily exercise"
               />
               <label for="exercise">Exercise</label>
-              <input type="checkbox" name="habits" id="habits" value="Drugs" />
+              <input type="checkbox" name="habits" id="drugs" value="Drugs" />
               <label for="drugs">Drugs</label>
             </div>
           </div>
-          <input type="button" value="send" />
+          <div class="form__button">
+            <button id="button" type="button" value="send">
+              Get evaluation
+            </button>
+          </div>
         </form>
+      </main>
+    </div>
+
+    <!-- Results -->
+    <div class="container">
+      <header class="header">
+        <h1 class="header__h1">Your Insurance plan</h1>
+        <p class="heapder__p">
+          Based on the answers given in the previous section. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Voluptate, laborum. Nemo rerum
+          architecto voluptates nam, optio maiores excepturi? Nesciunt,
+          officiis?
+        </p>
+      </header>
+      <main class="main">
+        <div class="output">
+          <p>Based on the answer you gave us your insurance would cost about</p>
+          <span class="output__span">234 euro</span>
+          <p>How we calculate our insurance prices:</p>
+          <p>Below the age of 18 = 500 euro</p>
+          <p>
+            If the customer is above 18 years of age the price is increased as
+            follows:
+          </p>
+          <p>18-25: + 10%</p>
+          <p>26-35: + 30%</p>
+          <p>36-45: + 60%</p>
+          <p>46-55: + 100%</p>
+          <p>56-65: + 150%</p>
+          <p>66+: + 210%</p>
+          <p>Preexisting Coditions:</p>
+          <p>
+            Hypertension | Blood Sugar | Overweight: Increase of 1% per
+            condition
+          </p>
+          <p>Habits:</p>
+          <p>Good habit (daily exercise): reduce 5% for every good habit</p>
+          <p>
+            Bad habit (smoking, consumption of alcohol or drugs: increase 5% for
+            every bad habit
+          </p>
+        </div>
       </main>
     </div>
   </body>
