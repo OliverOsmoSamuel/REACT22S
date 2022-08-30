@@ -20,116 +20,156 @@
           <div class="divider"></div>
         </div>
         <div class="form__wrapper">
-          <label for="name">Name</label>
-          <input id="name" type="text" />
+          <label class="subtitle" for="name">Fill in your name</label>
+          <input id="name" type="text" required />
         </div>
         <div class="divider"></div>
         <div class="form__wrapper">
-          <label for="form__radio-wrapper">Choose the size of the Pizza</label>
+          <label class="subtitle" for="form__radio-wrapper"
+            >Choose the size of the Pizza</label
+          >
           <div id="form__radio-wrapper" class="form__radio-wrapper">
             <div class="form__size-wrapper">
-              <input name="pizza-size" type="radio" id="pizza-size-2" />
+              <input
+                name="pizza-size"
+                type="radio"
+                id="pizza-size-2"
+                value="2"
+              />
               <label for="pizza-size-2">For 2 | 7,50€</label>
             </div>
             <div class="form__size-wrapper">
-              <input name="pizza-size" type="radio" id="pizza-size-4" />
+              <input
+                name="pizza-size"
+                type="radio"
+                id="pizza-size-4"
+                value="4"
+              />
               <label for="pizza-size-4">For 4 | 10,50€</label>
             </div>
             <div class="form__size-wrapper">
-              <input name="pizza-size" type="radio" id="pizza-size-6" />
+              <input
+                name="pizza-size"
+                type="radio"
+                id="pizza-size-6"
+                value="6"
+              />
               <label for="pizza-size-6">For 6 | 12,50€</label>
             </div>
+
             <div class="form__size-wrapper">
-              <input name="pizza-size" type="radio" id="pizza-size-8" />
+              <input
+                name="pizza-size"
+                type="radio"
+                id="pizza-size-8"
+                value="8"
+              />
               <label for="pizza-size-8">For 8 | 15,50€</label>
             </div>
           </div>
         </div>
         <div class="divider"></div>
         <div class="form__checkbox-wrapper">
-          <label for="">Toppings</label>
+          <label class="subtitle">Pick your favourite toppings</label>
           <div class="form__toppings-wrapper">
             <input
               type="checkbox"
-              name="toppings-pepperoni"
+              name="toppings"
               id="toppings-pepperoni"
+              value="pepperoni"
             />
             <label for="toppings-pepperoni">pepperoni</label>
           </div>
           <div class="form__toppings-wrapper">
             <input
               type="checkbox"
-              name="toppings-sausage"
+              name="toppings"
               id="toppings-sausage"
+              value="sausage"
             />
             <label for="toppings-sausage">sausage</label>
           </div>
           <div class="form__toppings-wrapper">
             <input
               type="checkbox"
-              name="toppings-mushrooms"
+              name="toppings"
               id="toppings-mushrooms"
+              value="mushrooms"
             />
             <label for="toppings-mushrooms">mushrooms</label>
           </div>
           <div class="form__toppings-wrapper">
-            <input type="checkbox" name="toppings-bacon" id="toppings-bacon" />
+            <input
+              type="checkbox"
+              name="toppings"
+              id="toppings-bacon"
+              value="bacon"
+            />
             <label for="toppings-bacon">bacon</label>
           </div>
           <div class="form__toppings-wrapper">
             <input
               type="checkbox"
-              name="toppings-onions"
+              name="toppings"
               id="toppings-onions"
+              value="onions"
             />
             <label for="toppings-onions">onions</label>
           </div>
           <div class="form__toppings-wrapper">
             <input
               type="checkbox"
-              name="toppings-extra-cheese"
+              name="toppings"
               id="toppings-extra-cheese"
+              value="extra cheese"
             />
             <label for="toppings-extra-cheese">extra cheese</label>
           </div>
           <div class="form__toppings-wrapper">
             <input
               type="checkbox"
-              name="toppings-peppers"
+              name="toppings"
               id="toppings-peppers"
+              value="peppers"
             />
             <label for="toppings-peppers">peppers</label>
           </div>
           <div class="form__toppings-wrapper">
             <input
               type="checkbox"
-              name="toppings-chicken"
+              name="toppings"
               id="toppings-chicken"
+              value="chicken"
             />
             <label for="toppings-chicken">chicken</label>
           </div>
           <div class="form__toppings-wrapper">
             <input
               type="checkbox"
-              name="toppings-olives"
+              name="toppings"
               id="toppings-olives"
+              value="olives"
             />
             <label for="toppings-olives">olives</label>
           </div>
           <div class="form__toppings-wrapper">
             <input
               type="checkbox"
-              name="toppings-spinach"
+              name="toppings"
               id="toppings-spinach"
+              value="spinach"
             />
             <label for="toppings-spinach">spinach</label>
           </div>
         </div>
         <div class="divider"></div>
         <div class="form__wrapper">
-          <label for="delivery" class="form__label">Delivery</label>
+          <label for="delivery" class="form__label subtitle"
+            >Where would you like to eat?</label
+          >
           <select name="delivery" id="delivery">
-            <option value="delivery-home">Delivery home, +5€</option>
+            <option value="">Please choose an option</option>
+            <option value="home-delivery">Home delivery, +5€</option>
             <option value="eat-in">Eat in</option>
             <option value="pickup">pickup food</option>
           </select>
@@ -138,36 +178,37 @@
         <input
           class="form__button"
           type="button"
-          value="Submit"
+          value="Order now!"
           onclick="priceCalculator(), orderSummary()"
         />
       </form>
+      <section class="image"></section>
       <section class="output">
         <h2 class="output__h2">Order Summary</h2>
         <div class="divider"></div>
 
         <div class="output__wrapper">
           <h3 class="output__h3">Name:</h3>
-          <p class="output__p">test</p>
+          <p id="output-name" class="output__p"></p>
         </div>
         <div class="output__wrapper">
           <h3 class="output__h3">Pizza Size:</h3>
-          <p class="output__p">test</p>
+          <p id="output-pizza-size" class="output__p"></p>
         </div>
         <div class="output__wrapper">
           <h3 class="output__h3">Toppings:</h3>
-          <p class="output__p">test</p>
+          <p id="output-toppings" class="output__p"></p>
         </div>
         <div class="output__wrapper">
           <h3 class="output__h3">Delivery:</h3>
-          <p class="output__p">test</p>
+          <p id="output-delivery" class="output__p"></p>
         </div>
 
         <div class="divider"></div>
 
         <div class="output__wrapper">
           <h3 class="output__h3">Total</h3>
-          <p class="output__p">test</p>
+          <p id="output-total" class="output__p"></p>
         </div>
       </section>
     </container>
