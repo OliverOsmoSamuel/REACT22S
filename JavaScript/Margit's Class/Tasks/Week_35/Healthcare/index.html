@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script rel="script.js" async></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__h1">Calculate your insurance price</h1>
+        <p class="heapder__p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo
+          cumque modi dolores qui quibusdam tempora vel corrupti eum fuga aut,
+          doloremque facilis dolorum, reiciendis optio excepturi, eius nam
+          impedit. Alias omnis fugiat illum illo, pariatur accusamus deserunt a
+          repellendus ex vero distinctio in hic ratione, quo laboriosam
+          recusandae possimus.
+        </p>
+      </header>
+      <main class="main">
+        <form class="form">
+          <div class="form__wrapper">
+            <div class="form__input-wrapper">
+              <label for="name" class="form__label form__title">Name</label>
+              <input type="text" id="name" class="form__input" />
+            </div>
+            <div class="form__input-wrapper">
+              <label for="age" class="form__label form__title">Age</label>
+              <input type="text" id="age" class="form__input" />
+            </div>
+          </div>
+          <div class="form__checkbox-wrapper">
+            <!-- Current Health -->
+            <div class="form__wrapper">
+              <input
+                type="checkbox"
+                name="currHealth"
+                id="hypertension"
+                value="Hypertension"
+              />
+              <label for="Hypertension" class="form__label">Hypertension</label>
+              <input
+                type="checkbox"
+                name="currHealth"
+                id="blood-sugar"
+                value="Blood Sugar"
+              />
+              <label for="blood-sugar">Blood Sugar</label>
+              <input
+                type="checkbox"
+                name="currHealth"
+                id="overweight"
+                value="Overweight"
+              />
+              <label for="overweight">Overweight</label>
+            </div>
+            <!-- habits -->
+            <div class="form__wrapper">
+              <input
+                type="checkbox"
+                name="habits"
+                id="smoking"
+                value="Smoking"
+              />
+              <label for="smoking" class="form__label">Smoking</label>
+              <input
+                type="checkbox"
+                name="habits"
+                id="alcohol"
+                value="Alcohol"
+              />
+              <label for="alcohol">Alcohol</label>
+              <input
+                type="checkbox"
+                name="habits"
+                id="exercise"
+                value="Daily exercise"
+              />
+              <label for="exercise">Exercise</label>
+              <input type="checkbox" name="habits" id="habits" value="Drugs" />
+              <label for="drugs">Drugs</label>
+            </div>
+          </div>
+          <input type="button" value="send" />
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
