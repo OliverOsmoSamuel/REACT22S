@@ -1,5 +1,8 @@
 * {
   margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -126,6 +129,12 @@ body {
   border: none;
   border-radius: 20px;
   padding: 10px 24px;
+}
+#button:hover {
+  opacity: 0.92;
+}
+#button:active {
+  opacity: 0.84;
 }
 
 .wrapper {

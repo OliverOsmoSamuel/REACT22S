@@ -12,13 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script rel="script.js" async></script>
+    <script src="script.js" async></script>
   </head>
   <body>
     <div class="container">
       <header class="header">
         <h1 class="header__h1">Calculate your insurance price</h1>
-        <p class="heapder__p">
+        <p class="header__p">
           First, tell me about yourself. Based on your age, income and family
           situation, we recommend you life insurance, serious illness insurance
           or permanent disability insurance. At the same time, you will see an
@@ -47,6 +47,7 @@
             </p>
             <div class="wrapper">
               <input
+                class="condition"
                 type="checkbox"
                 name="currHealth"
                 id="hypertension"
@@ -54,6 +55,7 @@
               />
               <label for="hypertension" class="form__label">Hypertension</label>
               <input
+                class="condition"
                 type="checkbox"
                 name="currHealth"
                 id="blood-sugar"
@@ -61,6 +63,7 @@
               />
               <label for="blood-sugar">Blood Sugar</label>
               <input
+                class="condition"
                 type="checkbox"
                 name="currHealth"
                 id="overweight"
@@ -76,32 +79,41 @@
             </p>
             <div class="wrapper">
               <input
+                class="habit"
                 type="checkbox"
                 name="habits"
                 id="smoking"
-                value="Smoking"
+                value="bad"
               />
               <label for="smoking" class="form__label">Smoking</label>
               <input
+                class="habit"
                 type="checkbox"
                 name="habits"
                 id="alcohol"
-                value="Alcohol"
+                value="bad"
               />
               <label for="alcohol">Alcohol</label>
               <input
+                class="habit"
                 type="checkbox"
                 name="habits"
                 id="exercise"
-                value="Daily exercise"
+                value="good"
               />
               <label for="exercise">Exercise</label>
-              <input type="checkbox" name="habits" id="drugs" value="Drugs" />
+              <input
+                class="habit"
+                type="checkbox"
+                name="habits"
+                id="drugs"
+                value="bad"
+              />
               <label for="drugs">Drugs</label>
             </div>
           </div>
           <div class="form__button">
-            <button id="button" type="button" value="send">
+            <button id="button" type="submit" onclick="calculateInsurance()">
               Get evaluation
             </button>
           </div>
@@ -123,8 +135,8 @@
       <main class="main">
         <div class="output">
           <p>Based on the answer you gave us your insurance would cost about</p>
-          <span class="output__span">234 euro</span>
-          <p>How we calculate our insurance prices:</p>
+          <span id="output" class="output__span"></span>
+          <!-- <p>How we calculate our insurance prices:</p>
           <p>Below the age of 18 = 500 euro</p>
           <p>
             If the customer is above 18 years of age the price is increased as
@@ -146,7 +158,7 @@
           <p>
             Bad habit (smoking, consumption of alcohol or drugs: increase 5% for
             every bad habit
-          </p>
+          </p> -->
         </div>
       </main>
     </div>
