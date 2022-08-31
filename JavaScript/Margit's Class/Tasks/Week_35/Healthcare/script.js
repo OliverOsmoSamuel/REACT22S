@@ -1,25 +1,23 @@
 const form = document.querySelector("form");
 const name = document.querySelector("#name");
 const age = document.querySelector("#age");
-const conditions = document.querySelectorAll("condition");
-const habits = document.querySelectorAll("habit");
+const conditions = document.querySelectorAll('[name="currHealth"');
+const habits = document.querySelectorAll('[name="size"]');
 const output = document.querySelector("#output");
 
 const calculateInsurance = (event) => {
   event.preventDefault();
-  console.log(name, age, conditions, habits, output);
   let price = 500,
     customerAge = age.value;
-
-  customerAge < 26
+  customerAge < 26 && customerAge >= 18
     ? (price += price * 0.1)
-    : customerAge < 36
+    : customerAge < 36 && customerAge >= 26
     ? (price += price * 0.3)
-    : customerAge < 46
+    : customerAge < 46 && customerAge >= 36
     ? (price += price * 0.6)
-    : customerAge < 56
+    : customerAge < 56 && customerAge >= 46
     ? (price += price * 1)
-    : customerAge < 66
+    : customerAge < 66 && customerAge >= 56
     ? (price += price * 1.5)
     : customerAge >= 66
     ? (price += price * 2.1)
@@ -32,6 +30,7 @@ const calculateInsurance = (event) => {
   });
 
   habits.forEach((habit) => {
+    console.log(habit.value);
     habit.value == "bad"
       ? (price += price * 0.05)
       : habit.value == "good"
@@ -41,4 +40,7 @@ const calculateInsurance = (event) => {
 
   console.log(price);
   output.textContent = price;
+  /* form.reset(); */
 };
+
+form.addEventListener("submit", calculateInsurance);
