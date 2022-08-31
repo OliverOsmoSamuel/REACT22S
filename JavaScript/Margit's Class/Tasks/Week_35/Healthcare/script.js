@@ -1,7 +1,3 @@
-(() => {
-  console.log("test");
-})();
-
 const form = document.querySelector("form");
 const name = document.querySelector("#name");
 const age = document.querySelector("#age");
