@@ -13,8 +13,7 @@
     />
     <!-- for nav and footer -->
     <link rel="stylesheet" href="/style.css" />
-    <!-- for gallery section -->
-    <link rel="stylesheet" href="gallery.css" />
+    <link rel="stylesheet" href="/pages/gallery.css" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <script src="/script.js" async></script>
   </head>
@@ -22,28 +21,38 @@
     <!-- navbar -->
     <nav id="navbar" class="navbar">
       <div class="navbar__container">
-        <a href="#" class="navbar__logo">Oliver Janhunen</a>
+        <a href="/" class="navbar__logo">Oliver Janhunen</a>
         <ul class="navbar__links">
           <li class="navbar__link">
-            <a href="#projects">Projects</a>
+            <a href="/#projects">Projects</a>
           </li>
-          <li class="navbar__link"><a href="#about">About Me</a></li>
-          <li class="navbar__link"><a href="#skills">Skills</a></li>
-          <li class="navbar__link"><a href="#contact">Contact</a></li>
+          <li class="navbar__link">
+            <a href="/#about">About Me</a>
+          </li>
+          <li class="navbar__link"><a href="/#skills">Skills</a></li>
+          <li class="navbar__link">
+            <a href="/#contact">Contact</a>
+          </li>
+          <li class="navbar__link">
+            <a href="#">Gallery</a>
+          </li>
         </ul>
         <!-- mobile links -->
         <ul id="navbar__links-mobile" class="navbar__links-mobile">
           <li class="navbar__link-mobile">
-            <a onclick="navToggle()" href="#projects">Projects</a>
+            <a onclick="navToggle()" href="/#projects">Projects</a>
           </li>
           <li onclick="navToggle()" class="navbar__link-mobile">
-            <a href="#about">About Me</a>
+            <a href="/#about">About Me</a>
           </li>
           <li onclick="navToggle()" class="navbar__link-mobile">
-            <a href="#skills">Skills</a>
+            <a href="/#skills">Skills</a>
           </li>
           <li onclick="navToggle()" class="navbar__link-mobile">
-            <a href="#contact">Contact</a>
+            <a href="/#contact">Contact</a>
+          </li>
+          <li class="navbar__link-mobile">
+            <a onclick="navToggle()" href="#">Gallery</a>
           </li>
         </ul>
         <div class="navbar__hamburger-menu" onclick="navToggle()">
@@ -51,7 +60,32 @@
         </div>
       </div>
     </nav>
+    <!-- gallery -->
+    <div class="gallery">
+      <div class="gallery__wrapper">
+        <div class="gallery__heading-wrapper">
+          <h2 class="gallery__h2">Gallery</h2>
+          <p class="skills__p">
+            A gallery of random images taken from unsplash
+          </p>
+        </div>
+        <div class="img-1"></div>
+        <div class="img-2"></div>
+        <div class="img-3"></div>
+        <div class="img-4"></div>
+        <div class="img-5"></div>
+        <div class="img-6"></div>
+        <div class="img-7"></div>
+        <div class="img-8"></div>
+        <div class="img-9"></div>
+      </div>
+    </div>
     <!-- footer -->
-    <footer class="footer">© 2021 Oliver Janhunen. All rights reserved</footer>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <p class="footer__p">© 2021 Oliver Janhunen. All rights reserved</p>
+        <a class="footer__a" href="#">back to top</a>
+      </div>
+    </footer>
   </body>
 </html>
