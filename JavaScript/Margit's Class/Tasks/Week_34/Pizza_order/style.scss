@@ -1,5 +1,6 @@
 body {
   font-family: "Inter", sans-serif;
+  margin: 0;
 }
 
 h1 {
@@ -54,7 +55,7 @@ label {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 32px;
-  margin: 0 32px;
+  margin: 0 auto;
   padding: 80px 0;
 }
 
