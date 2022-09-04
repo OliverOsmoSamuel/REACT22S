@@ -33,11 +33,11 @@
           </div>
           <div class="form__wrapper">
             <label for="name" class="form__label form__title">Name</label>
-            <input type="text" id="name" class="form__input" />
+            <input type="text" id="name" class="form__input" required />
           </div>
           <div class="form__wrapper">
             <label for="age" class="form__label form__title">Age</label>
-            <input type="number" id="age" class="form__input" />
+            <input type="number" id="age" class="form__input" required />
           </div>
 
           <!-- Current Health -->
@@ -112,8 +112,10 @@
               <label for="drugs">Drugs</label>
             </div>
           </div>
-          <div class="form__button">
-            <button id="button" type="submit">Get evaluation</button>
+          <div class="form__button-wrapper">
+            <button class="form__button" id="button" type="submit">
+              Get evaluation
+            </button>
           </div>
         </form>
       </main>
@@ -131,32 +133,12 @@
         </p>
       </header>
       <main class="main">
-        <div class="output">
-          <p>Based on the answer you gave us your insurance would cost about</p>
-          <span id="output" class="output__span"></span>
-          <!-- <p>How we calculate our insurance prices:</p>
-          <p>Below the age of 18 = 500 euro</p>
+        <div id="output-container" class="output">
           <p>
-            If the customer is above 18 years of age the price is increased as
-            follows:
+            <span id="output-name" class="output__span"></span>, based on the
+            answer you gave us your insurance would cost
+            <span id="output" class="output__span"></span> euro.
           </p>
-          <p>18-25: + 10%</p>
-          <p>26-35: + 30%</p>
-          <p>36-45: + 60%</p>
-          <p>46-55: + 100%</p>
-          <p>56-65: + 150%</p>
-          <p>66+: + 210%</p>
-          <p>Preexisting Coditions:</p>
-          <p>
-            Hypertension | Blood Sugar | Overweight: Increase of 1% per
-            condition
-          </p>
-          <p>Habits:</p>
-          <p>Good habit (daily exercise): reduce 5% for every good habit</p>
-          <p>
-            Bad habit (smoking, consumption of alcohol or drugs: increase 5% for
-            every bad habit
-          </p> -->
         </div>
       </main>
     </div>

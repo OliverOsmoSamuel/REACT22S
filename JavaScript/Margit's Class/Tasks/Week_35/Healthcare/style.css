@@ -120,6 +120,10 @@ body {
   border: 1px rgb(139, 138, 141) solid;
 }
 
+.output__span {
+  font-weight: 700;
+}
+
 #button {
   font-family: sans-serif;
   font-size: 16px;
@@ -135,6 +139,10 @@ body {
 }
 #button:active {
   opacity: 0.84;
+}
+
+#output-container {
+  display: none;
 }
 
 .wrapper {

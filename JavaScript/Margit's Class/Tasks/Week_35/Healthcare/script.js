@@ -2,11 +2,14 @@ const form = document.querySelector("form");
 const name = document.querySelector("#name");
 const age = document.querySelector("#age");
 const conditions = document.querySelectorAll('[name="currHealth"');
-const habits = document.querySelectorAll('[name="size"]');
+const habits = document.querySelectorAll('[name="habits"]');
 const output = document.querySelector("#output");
+const outputName = document.querySelector("#output-name");
+const outputContainer = document.querySelector("#output-container");
 
 const calculateInsurance = (event) => {
   event.preventDefault();
+
   let price = 500,
     customerAge = age.value;
   customerAge < 26 && customerAge >= 18
@@ -30,17 +33,18 @@ const calculateInsurance = (event) => {
   });
 
   habits.forEach((habit) => {
-    console.log(habit.value);
-    habit.value == "bad"
+    habit.value === "bad" && habit.checked
       ? (price += price * 0.05)
-      : habit.value == "good"
+      : habit.value === "good" && habit.checked
       ? (price -= price * 0.05)
       : null;
   });
 
-  console.log(price);
   output.textContent = price;
-  /* form.reset(); */
+  outputName.textContent = name.value;
+  outputContainer.style.display = "inline-block";
+  window.scrollTo(0, document.body.scrollHeight);
+  form.reset();
 };
 
 form.addEventListener("submit", calculateInsurance);
