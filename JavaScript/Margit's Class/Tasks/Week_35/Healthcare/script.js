@@ -40,7 +40,7 @@ const calculateInsurance = (event) => {
       : null;
   });
 
-  output.textContent = price;
+  output.textContent = Math.floor(price);
   outputName.textContent = name.value;
   outputContainer.style.display = "inline-block";
   window.scrollTo(0, document.body.scrollHeight);
