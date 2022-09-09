@@ -1,0 +1,20 @@
+{
+  "cars": [
+    {
+      "licencePlate": "29383738",
+      "maker": "Subaru",
+      "model": "Outback",
+      "owner": "James",
+      "price": "2300",
+      "color": "Red"
+    },
+    {
+      "licencePlate": "65938293",
+      "maker": "Nissan",
+      "model": "Altima",
+      "owner": "Carl",
+      "price": "3000",
+      "color": "Black"
+    }
+  ]
+}

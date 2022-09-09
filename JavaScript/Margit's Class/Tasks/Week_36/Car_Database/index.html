@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" async></script>
+  </head>
+  <body>
+    <container class="container">
+      <main class="main">
+        <section class="input">
+          <h2 class="input__h2">Insert Car Data</h2>
+          <p class="input__p">
+            Add as many cars as you want to. Make sure to fill out all the
+            fields.
+          </p>
+          <form class="form">
+            <div class="form__input-wrapper">
+              <input
+                class="form__input"
+                type="text"
+                name="car-data"
+                id="licence-number"
+                placeholder="Licence Number"
+                required
+              />
+              <input
+                class="form__input"
+                type="text"
+                name="car-data"
+                id="car-maker"
+                placeholder="Car Maker"
+                required
+              />
+              <input
+                class="form__input"
+                type="text"
+                name="car-data"
+                id="car-model"
+                placeholder="Car Model"
+                required
+              />
+              <input
+                class="form__input"
+                type="text"
+                name="car-data"
+                id="car-owner"
+                placeholder="Car Owner"
+                required
+              />
+              <input
+                class="form__input"
+                type="text"
+                name="car-data"
+                id="car-price"
+                placeholder="Car Price"
+                required
+              />
+              <input
+                class="form__input"
+                type="text"
+                name="car-data"
+                id="car-color"
+                placeholder="Car Color"
+                required
+              />
+            </div>
+            <div class="form__button-wrapper">
+              <input
+                class="form__button-submit form__button"
+                type="button"
+                value="Add Car"
+              />
+              <input
+                class="form__button-reset form__button"
+                type="button"
+                value="Reset"
+              />
+            </div>
+          </form>
+        </section>
+        <section class="output">
+          <h2 class="output__h2">Car Database</h2>
+          <p class="output__p">
+            Here we display all the cars you added. If it’s empty, make sure to
+            add a few by filling the form on the left.
+          </p>
+          <div class="database">
+            <h3 class="database__h3">Licence</h3>
+            <h3 class="database__h3">Maker</h3>
+            <h3 class="database__h3">Model</h3>
+            <h3 class="database__h3">Owner</h3>
+            <h3 class="database__h3">Price</h3>
+            <h3 class="database__h3">Color</h3>
+            <p class="database__p">Licence</p>
+            <p class="database__p">Maker</p>
+            <p class="database__p">Model</p>
+            <p class="database__p">Owner</p>
+            <p class="database__p">Price</p>
+            <p class="database__p">Color</p>
+          </div>
+        </section>
+      </main>
+    </container>
+  </body>
+</html>
