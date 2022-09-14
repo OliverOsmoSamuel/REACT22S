@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Task</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" async></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="nav" class="nav">
+      <div class="nav__logo"><a href="#">Logo</a></div>
+      <ul class="nav__ul">
+        <li class="nav__li"><a class="nav__a" href="#first">First</a></li>
+        <li class="nav__li"><a class="nav__a" href="#second">Second</a></li>
+        <li class="nav__li"><a class="nav__a" href="#third">Third</a></li>
+        <li class="nav__li"><a class="nav__a" href="#fourth">Fourth</a></li>
+      </ul>
+      <!-- Mobile Links -->
+      <div class="nav-mobile">
+        <ul class="nav-mobile__ul">
+          <li class="nav-mobile__li">
+            <a class="nav-mobile__a" href="#first" onclick="navToggle()"
+              >First</a
+            >
+          </li>
+          <li class="nav-mobile__li">
+            <a class="nav-mobile__a" href="#second" onclick="navToggle()"
+              >Second</a
+            >
+          </li>
+          <li class="nav-mobile__li">
+            <a class="nav-mobile__a" href="#third" onclick="navToggle()"
+              >Third</a
+            >
+          </li>
+          <li class="nav-mobile__li">
+            <a class="nav-mobile__a" href="#fourth" onclick="navToggle()"
+              >Fourth</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="nav-mobile__hamburger" onclick="navToggle()">
+        <img
+          class="nav-mobile__icon"
+          src="/assets/hamburger.svg"
+          alt="hamburger icon"
+        />
+      </div>
+    </nav>
+    <!-- Main -->
+    <main class="main">
+      <section id="first" class="section">
+        <h2>First</h2>
+        <div class="button" onclick="modalToggle()">Don't Click</div>
+      </section>
+      <section id="second" class="section">
+        <h2>Second</h2>
+      </section>
+      <section id="third" class="section">
+        <h2>Third</h2>
+      </section>
+      <section id="fourth" class="section">
+        <h2>Fourth</h2>
+      </section>
+      <!-- Back to top -->
+      <div class="button top"><a class="top__a" href="#">Back to top</a></div>
+    </main>
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal__content">
+        <div class="modal__button-wrapper">
+          <div onclick="modalToggle()" class="button">X</div>
+        </div>
+        <h2>Modal</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, ea
+          laborum provident consectetur est autem necessitatibus corporis
+          maiores accusantium amet magni dolores officiis odio quasi et
+          voluptate enim fugit, illo dignissimos dolorem consequuntur labore
+          modi! Dolorum odit hic eligendi commodi.
+        </p>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">Copyright stuff reserved</footer>
+  </body>
+</html>

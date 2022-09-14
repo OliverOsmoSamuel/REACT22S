@@ -1,0 +1,220 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: "Amiko", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: inherit;
+}
+
+/* Reusable */
+
+.disable-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.button {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 8px;
+  padding: 12px 20px;
+  background-color: black;
+  color: white;
+}
+
+.section {
+  height: 300px;
+  padding: 80px;
+}
+
+/* Nav */
+
+.nav {
+  position: sticky;
+  top: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  background-color: #d6ffb7;
+  color: black;
+  &--scrolled {
+    background-color: white;
+  }
+  &__ul {
+    display: flex;
+    gap: 8px;
+  }
+  &-mobile {
+    &__ul {
+      display: none;
+    }
+    &__a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+    &__hamburger {
+      display: none;
+    }
+  }
+  &__li {
+    padding: 4px 8px;
+    list-style-type: none;
+  }
+}
+
+/* Footer */
+
+.footer {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: white;
+  font-weight: 500;
+}
+
+/* Back to top button */
+
+.top {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  color: white;
+  &__a {
+    color: white;
+  }
+  &--visible {
+    display: block;
+  }
+}
+
+/* Modal */
+
+.modal {
+  display: none;
+  position: absolute;
+  height: 110vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: black;
+  align-items: center;
+  justify-content: center;
+  &--visible {
+    display: flex;
+  }
+  &__content {
+    padding: 20px;
+    border-radius: 16px;
+    background-color: white;
+    width: 80%;
+    max-width: 700px;
+    height: fit-content;
+  }
+  &__button-wrapper {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+}
+
+/* ID's */
+
+#first {
+  background-color: #d6ffb7;
+}
+
+#second {
+  background-color: #f5ff90;
+}
+
+#third {
+  background-color: #ffc15e;
+}
+
+#fourth {
+  background-color: #ff9f1c;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    padding: 0 40px;
+  }
+  .section {
+    padding: 40px;
+  }
+  .top {
+    right: 40px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .nav {
+    padding: 0;
+    &__logo {
+      padding-left: 20px;
+    }
+    &__ul {
+      padding: 20px 0;
+      display: none;
+    }
+    &-mobile {
+      width: 100%;
+      position: absolute;
+      top: -312px;
+      background-color: inherit;
+      padding: 24px 0;
+      &--open {
+        top: 80px;
+      }
+      &__ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      &__li {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        height: 60px;
+        list-style-type: none;
+      }
+      &__hamburger {
+        display: inline-block;
+        padding-right: 20px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .section {
+    padding: 20px;
+  }
+  .top {
+    right: 20px;
+  }
+}
