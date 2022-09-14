@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <script src="script.js" async></script>
+  </head>
+  <body>
+    <main class="main">
+      <container class="gradient"></container>
+      <container class="generator">
+        <div class="header">
+          <h1 class="header__h1">Gradient Generator</h1>
+          <p class="header__p">Beautiful, lush gradients</p>
+        </div>
+        <form class="form">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Colors</legend>
+            <input class="form__input-color" type="color" id="first-color" />
+            <input class="form__input-color" type="color" id="second-color" />
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Direction</legend>
+            <div class="form__grid">
+              <div class="form__direction">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="direction"
+                  value="south-east"
+                  id="south-east"
+                  checked="checked"
+                />
+                <label for="south-east" class="material-symbols-outlined">
+                  arrow_forward
+                </label>
+              </div>
+              <div class="form__direction">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="direction"
+                  value="south"
+                  id="south"
+                /><label for="south" class="material-symbols-outlined">
+                  arrow_forward
+                </label>
+              </div>
+              <div class="form__direction">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="direction"
+                  value="south-west"
+                  id="south-west"
+                /><label for="south-west" class="material-symbols-outlined">
+                  arrow_forward
+                </label>
+              </div>
+              <div class="form__direction">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="direction"
+                  value="west"
+                  id="west"
+                /><label for="west" class="material-symbols-outlined">
+                  arrow_forward
+                </label>
+              </div>
+              <div class="form__spacer"></div>
+              <div class="form__direction">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="direction"
+                  value="nord-west"
+                  id="nord-west"
+                /><label for="nord-west" class="material-symbols-outlined">
+                  arrow_forward
+                </label>
+              </div>
+              <div class="form__direction">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="direction"
+                  value="nord"
+                  id="nord"
+                /><label for="nord" class="material-symbols-outlined">
+                  arrow_forward
+                </label>
+              </div>
+              <div class="form__direction">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="direction"
+                  value="nord-east"
+                  id="nord-east"
+                /><label for="nord-east" class="material-symbols-outlined">
+                  arrow_forward
+                </label>
+              </div>
+              <div class="form__direction">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="direction"
+                  value="east"
+                  id="east"
+                /><label for="east" class="material-symbols-outlined">
+                  arrow_forward
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <div class="output">
+          <h2 class="output__h2">Code</h2>
+          <p class="output__p" id="output"></p>
+        </div>
+      </container>
+    </main>
+  </body>
+</html>
