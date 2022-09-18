@@ -6,6 +6,7 @@ const carModel = document.querySelector("#car-model");
 const carOwner = document.querySelector("#car-owner");
 const carPrice = document.querySelector("#car-price");
 const carColor = document.querySelector("#car-color");
+let carDatabase = [];
 
 const addData = (event) => {
   event.preventDefault();
@@ -17,6 +18,9 @@ const addData = (event) => {
   car.push(carOwner.value);
   car.push(carPrice.value);
   car.push(carColor.value);
+
+  carDatabase.push(car);
+  console.log(carDatabase);
 
   car.forEach((data) => {
     let newP = document.createElement("p");
