@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -33,19 +35,25 @@ h6 {
   overflow-wrap: break-word;
 }
 
+input[type=radio]:checked {
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(230, 230, 230, 0.5), inset -5px 5px 10px rgba(230, 230, 230, 0.2), inset 5px -5px 10px rgba(230, 230, 230, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.9), inset 5px 5px 13px rgba(230, 230, 230, 0.9);
+}
+
 .main {
   padding: 48px;
   display: grid;
   gap: 48px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
 }
 
+.rotate {
+  transform: rotate(-45deg);
+}
+
 .gradient {
   height: 100%;
-  background: lightcoral;
   box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
   border-radius: 50px;
 }
@@ -118,6 +126,9 @@ h6 {
 }
 .form__direction {
   box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 56px;
   height: 56px;
   border-radius: 16px;
@@ -127,6 +138,9 @@ h6 {
 }
 .form__direction:active {
   box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(230, 230, 230, 0.5), inset -5px 5px 10px rgba(230, 230, 230, 0.2), inset 5px -5px 10px rgba(230, 230, 230, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.9), inset 5px 5px 13px rgba(230, 230, 230, 0.9);
+}
+.form__direction label {
+  cursor: pointer;
 }
 .form__input {
   display: none;
@@ -153,6 +167,6 @@ input[type=color]::-webkit-color-swatch {
   background-color: transparent;
 }
 
-.material-symbols-outlined {
+.fa-solid {
   padding: 16px;
 }/*# sourceMappingURL=style.css.map */

@@ -12,25 +12,37 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
+    <script
+      src="https://kit.fontawesome.com/8e0ddc688c.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js" async></script>
   </head>
   <body>
     <main class="main">
-      <container class="gradient"></container>
+      <container id="gradient" class="gradient"></container>
       <container class="generator">
         <div class="header">
           <h1 class="header__h1">Gradient Generator</h1>
           <p class="header__p">Beautiful, lush gradients</p>
         </div>
-        <form class="form">
+        <form id="form" class="form">
           <fieldset class="form__fieldset">
             <legend class="form__legend">Colors</legend>
-            <input class="form__input-color" type="color" id="first-color" />
-            <input class="form__input-color" type="color" id="second-color" />
+            <input
+              class="form__input-color"
+              type="color"
+              id="first-color"
+              name="color"
+              value="#FFC700"
+            />
+            <input
+              class="form__input-color"
+              type="color"
+              id="second-color"
+              name="color"
+              value="#FF0000"
+            />
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">Direction</legend>
@@ -40,12 +52,11 @@
                   class="form__input"
                   type="radio"
                   name="direction"
-                  value="south-east"
+                  value="135deg"
                   id="south-east"
-                  checked="checked"
                 />
-                <label for="south-east" class="material-symbols-outlined">
-                  arrow_forward
+                <label for="south-east">
+                  <i class="fa-solid fa-arrow-down rotate"></i>
                 </label>
               </div>
               <div class="form__direction">
@@ -53,10 +64,11 @@
                   class="form__input"
                   type="radio"
                   name="direction"
-                  value="south"
+                  value="180deg"
                   id="south"
-                /><label for="south" class="material-symbols-outlined">
-                  arrow_forward
+                  checked="checked"
+                /><label for="south">
+                  <i class="fa-solid fa-arrow-down"></i>
                 </label>
               </div>
               <div class="form__direction">
@@ -64,10 +76,10 @@
                   class="form__input"
                   type="radio"
                   name="direction"
-                  value="south-west"
+                  value="225deg"
                   id="south-west"
-                /><label for="south-west" class="material-symbols-outlined">
-                  arrow_forward
+                /><label for="south-west">
+                  <i class="fa-solid fa-arrow-left rotate"></i>
                 </label>
               </div>
               <div class="form__direction">
@@ -75,10 +87,10 @@
                   class="form__input"
                   type="radio"
                   name="direction"
-                  value="west"
+                  value="90deg"
                   id="west"
-                /><label for="west" class="material-symbols-outlined">
-                  arrow_forward
+                /><label for="west">
+                  <i class="fa-solid fa-arrow-right"></i>
                 </label>
               </div>
               <div class="form__spacer"></div>
@@ -87,10 +99,10 @@
                   class="form__input"
                   type="radio"
                   name="direction"
-                  value="nord-west"
+                  value="270deg"
                   id="nord-west"
-                /><label for="nord-west" class="material-symbols-outlined">
-                  arrow_forward
+                /><label for="nord-west">
+                  <i class="fa-solid fa-arrow-left"></i>
                 </label>
               </div>
               <div class="form__direction">
@@ -98,10 +110,10 @@
                   class="form__input"
                   type="radio"
                   name="direction"
-                  value="nord"
+                  value="45deg"
                   id="nord"
-                /><label for="nord" class="material-symbols-outlined">
-                  arrow_forward
+                /><label for="nord">
+                  <i class="fa-solid fa-arrow-right rotate"></i>
                 </label>
               </div>
               <div class="form__direction">
@@ -109,10 +121,10 @@
                   class="form__input"
                   type="radio"
                   name="direction"
-                  value="nord-east"
+                  value="0deg"
                   id="nord-east"
-                /><label for="nord-east" class="material-symbols-outlined">
-                  arrow_forward
+                /><label for="nord-east">
+                  <i class="fa-solid fa-arrow-up"></i>
                 </label>
               </div>
               <div class="form__direction">
@@ -120,10 +132,10 @@
                   class="form__input"
                   type="radio"
                   name="direction"
-                  value="east"
+                  value="315deg"
                   id="east"
-                /><label for="east" class="material-symbols-outlined">
-                  arrow_forward
+                /><label for="east">
+                  <i class="fa-solid fa-arrow-up rotate"></i>
                 </label>
               </div>
             </div>
@@ -131,7 +143,7 @@
         </form>
         <div class="output">
           <h2 class="output__h2">Code</h2>
-          <p class="output__p" id="output"></p>
+          <code class="output__p" id="output"></code>
         </div>
       </container>
     </main>
